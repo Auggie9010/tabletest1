@@ -1,0 +1,39 @@
+<mvc:View
+    controllerName="ns.HTML5Module.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.ui.table"
+	xmlns:m="sap.m"
+    height="100%">
+			<Table
+				rows="{/BusinessPartnerSet}"
+				selectionMode="MultiToggle"
+				visibleRowCount="7"
+				paste="onPaste"
+				ariaLabelledBy="title">
+				<extension>
+					<m:OverflowToolbar>
+						<m:Title id="title" text="BusinessPartner"/>
+					</m:OverflowToolbar>
+				</extension>
+				<columns>
+					<Column>
+						<m:Label text="CompanyName" />
+						<template>
+							<m:Text text="{CompanyName}"/>
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="PhoneNumber" />
+						<template>
+							<m:Text text="{PhoneNumber}"/>
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="BusinessPartnerID" />
+						<template>
+							<m:Text text="{BusinessPartnerID}"/>
+						</template>
+					</Column>
+				</columns>
+			</Table>
+</mvc:View>
